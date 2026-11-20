@@ -291,6 +291,61 @@ body::before {
 
 .kabaddi-score-open{display:flex;width:100%;margin-top:14px;text-align:center;min-height:42px;animation:selSoftPulse 3.5s ease-in-out infinite}</style>
 
+
+<style id="kabaddi-single-file-css">
+body.kabaddi-mode{background:radial-gradient(circle at 15% 5%,#29477d,#0a1020 48%,#170d19)!important;color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:normal;overflow-x:hidden}
+body.kabaddi-mode #site-shell{display:none!important}
+body.kabaddi-mode #kabaddi-app{display:block!important}
+body.kabaddi-mode #kabaddi-app *{box-sizing:border-box}
+body.kabaddi-mode #kabaddi-app .wrap{max-width:1050px;width:calc(100% - 24px);margin:auto;padding:22px 0}
+body.kabaddi-mode #kabaddi-app button{font:inherit}
+body.kabaddi-mode #kabaddi-app .scorestrip{height:76px}
+body.kabaddi-mode.kabaddi-output{background:transparent!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .wrap{width:100%;max-width:none;margin:0;padding:0}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .top,body.kabaddi-mode.kabaddi-output #kabaddi-app .head,body.kabaddi-mode.kabaddi-output #kabaddi-app .controls,body.kabaddi-mode.kabaddi-output #kabaddi-app .control-title,body.kabaddi-mode.kabaddi-output #kabaddi-app .actions,body.kabaddi-mode.kabaddi-output #kabaddi-app .settings,body.kabaddi-mode.kabaddi-output #kabaddi-app .urlbox,body.kabaddi-mode.kabaddi-output #kabaddi-app .note{display:none!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .board{padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .scorestrip{width:min(100%,760px);height:56px;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:5px;padding:4px;border:1px solid rgba(255,255,255,.22);border-radius:0;background:rgba(5,10,24,.92);box-shadow:0 3px 12px #0008}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .side{padding:3px 7px;gap:6px}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .flag{font-size:22px}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .teamname{font-size:clamp(10px,1.5vw,14px)}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .mid{font-size:clamp(20px,2.8vw,30px);min-width:90px;gap:6px}
+@media(max-width:620px){body.kabaddi-mode #kabaddi-app .controls{grid-template-columns:1fr}body.kabaddi-mode #kabaddi-app .scorestrip{height:64px}body.kabaddi-mode #kabaddi-app .mid{min-width:75px}body.kabaddi-mode #kabaddi-app .side{gap:5px;padding:4px}body.kabaddi-mode #kabaddi-app .flag{font-size:23px}body.kabaddi-mode #kabaddi-app .teamname{font-size:11px}}
+/* Match scoreboard styling based on the supplied India–Sri Lanka reference */
+body.kabaddi-mode #kabaddi-app .scorestrip{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px;width:min(100%,760px);height:118px;padding:9px 10px;background:linear-gradient(105deg,#070b22 0%,#111d54 48%,#101052 100%);border:0;border-radius:0;box-shadow:0 4px 16px #0008;overflow:hidden}
+body.kabaddi-mode #kabaddi-app .side{height:72px;min-width:0;display:flex;align-items:stretch;gap:0;padding:0;background:transparent;border:0;border-radius:0;overflow:hidden}
+body.kabaddi-mode #kabaddi-app .flag{width:28%;min-width:54px;height:72px;display:flex;align-items:center;justify-content:center;font-size:30px;line-height:1;background:#17234b;border-top:8px solid #f6a52d;border-bottom:0;border-radius:0;overflow:hidden}
+body.kabaddi-mode #kabaddi-app .flag svg{display:block;width:100%;height:100%;object-fit:cover}
+body.kabaddi-mode #kabaddi-app .teamname{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;padding:4px 8px;background:#fff;color:#11172d;font-family:Arial,Helvetica,sans-serif;font-size:clamp(13px,2vw,19px);font-weight:900;letter-spacing:.01em;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.kabaddi-mode #kabaddi-app .mid{display:flex;align-items:center;justify-content:center;gap:12px;min-width:150px;padding:0 4px;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:clamp(30px,5vw,48px);font-weight:900;line-height:1;white-space:nowrap}
+body.kabaddi-mode #kabaddi-app .mid .score{font:inherit;color:#fff}
+body.kabaddi-mode #kabaddi-app .mid .dash{color:#fff;font-weight:900}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .scorestrip{width:760px;height:118px;padding:9px 10px;gap:10px;background:linear-gradient(105deg,#070b22 0%,#111d54 48%,#101052 100%);border:0;box-shadow:none}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .side{height:72px;padding:0;gap:0}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .flag{height:72px;min-width:54px;font-size:30px;border-top:8px solid #f6a52d}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .teamname{font-size:19px;padding:4px 8px}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .mid{min-width:150px;font-size:48px;gap:12px}
+@media(max-width:620px){body.kabaddi-mode #kabaddi-app .scorestrip{height:auto;min-height:74px;padding:5px;gap:4px}body.kabaddi-mode #kabaddi-app .side{height:48px}body.kabaddi-mode #kabaddi-app .flag{min-width:34px;height:48px;font-size:20px;border-top-width:5px}body.kabaddi-mode #kabaddi-app .teamname{font-size:clamp(9px,2.4vw,13px);padding:2px 3px}body.kabaddi-mode #kabaddi-app .mid{min-width:72px;font-size:clamp(20px,5vw,30px);gap:4px}body.kabaddi-mode.kabaddi-output #kabaddi-app .scorestrip{width:100%;height:auto;min-height:74px;padding:5px;gap:4px}body.kabaddi-mode.kabaddi-output #kabaddi-app .side{height:48px}body.kabaddi-mode.kabaddi-output #kabaddi-app .flag{height:48px;min-width:34px;font-size:20px;border-top-width:5px}body.kabaddi-mode.kabaddi-output #kabaddi-app .teamname{font-size:clamp(9px,2.4vw,13px);padding:2px 3px}body.kabaddi-mode.kabaddi-output #kabaddi-app .mid{min-width:72px;font-size:clamp(20px,5vw,30px);gap:4px}}
+
+/* 1920x1080 transparent broadcast canvas: reference scoreboard design */
+body.kabaddi-mode.kabaddi-output{width:1920px!important;height:1080px!important;min-width:1920px!important;min-height:1080px!important;overflow:hidden!important;background:transparent!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app{display:block!important;width:1920px!important;height:1080px!important;overflow:hidden!important;background:transparent!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .wrap{position:relative!important;width:1920px!important;height:1080px!important;max-width:none!important;margin:0!important;padding:0!important;overflow:hidden!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .board{position:static!important;width:1920px!important;height:1080px!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:hidden!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .scorestrip{position:absolute!important;left:260px!important;top:105px!important;width:1400px!important;height:165px!important;display:grid!important;grid-template-columns:420px 480px 420px!important;align-items:center!important;gap:10px!important;padding:9px 10px!important;background:linear-gradient(105deg,#070b22 0%,#111d54 48%,#101052 100%)!important;border:2px solid rgba(255,255,255,.9)!important;border-radius:16px!important;box-shadow:0 8px 20px rgba(0,0,0,.38)!important;overflow:hidden!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .side{height:118px!important;min-width:0!important;display:flex!important;align-items:stretch!important;gap:0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:10px!important;overflow:hidden!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .flag{width:150px!important;min-width:150px!important;height:118px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:48px!important;line-height:1!important;background:#17234b!important;border-top:10px solid #f6a52d!important;border-radius:0!important;overflow:hidden!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .flag svg{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .teamname{flex:1!important;min-width:0!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:8px 12px!important;background:#fff!important;color:#11172d!important;font-family:Arial,Helvetica,sans-serif!important;font-size:34px!important;font-weight:900!important;letter-spacing:.01em!important;text-align:center!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .mid{display:flex!important;align-items:center!important;justify-content:center!important;gap:18px!important;min-width:0!important;padding:0 8px!important;color:#fff!important;font-family:Arial,Helvetica,sans-serif!important;font-size:58px!important;font-weight:900!important;line-height:1!important;white-space:nowrap!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .mid .score{font:inherit!important;color:#fff!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .mid .dash{color:#fff!important;font-weight:900!important}
+body.kabaddi-mode.kabaddi-output #kabaddi-app .top,body.kabaddi-mode.kabaddi-output #kabaddi-app .head,body.kabaddi-mode.kabaddi-output #kabaddi-app .controls,body.kabaddi-mode.kabaddi-output #kabaddi-app .control-title,body.kabaddi-mode.kabaddi-output #kabaddi-app .actions,body.kabaddi-mode.kabaddi-output #kabaddi-app .settings,body.kabaddi-mode.kabaddi-output #kabaddi-app .urlbox,body.kabaddi-mode.kabaddi-output #kabaddi-app .note{display:none!important}
+/* Admin preview keeps the scoreboard responsive; output URL always stays 1920x1080. */
+body.kabaddi-mode:not(.kabaddi-output) #kabaddi-app .scorestrip{width:min(100%,900px);height:118px}
+
+</style>
+<script>if(location.search.includes('kabaddi=1')||location.search.includes('kabaddi-overlay=1')){document.documentElement.classList.add('kabaddi-route');document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('kabaddi-mode'));}</script>
+
 </head>
 <body>
 <div id="site-shell">
@@ -356,7 +411,7 @@ body::before {
     <div class="section-head reveal"><div class="eyebrow">Five event types • five unique designs</div><h2>YOUR EVENT <span class="gold">BOTTOM FRAMES</span></h2><p>Choose a category-specific bottom frame. We can personalize it with your name, event logo and photo.</p></div>
     <div class="overlay-grid">
       <article class="overlay-card reveal frame-cricket"><div class="preview"><div class="preview-bar"><span class="preview-logo">LOGO</span><span class="preview-copy"><strong>CRICKET LIVE • TEAM A vs TEAM B</strong><small>YOUR TOURNAMENT NAME • LIVE SCORE</small></span><span class="preview-photo">PHOTO</span></div></div><h3>Cricket Bottom Frame</h3><p>Broadcast-style score strip for cricket matches and tournaments.</p><div class="personalize">Personalize: Name • Logo • Photo</div></article>
-      <article class="overlay-card reveal frame-kabaddi"><div class="preview"><div class="preview-bar"><span class="preview-logo">LOGO</span><span class="preview-copy"><strong>KABADDI • RAID IN PROGRESS</strong><small>TEAM NAME • SCORE • MATCH DETAILS</small></span><span class="preview-photo">PHOTO</span></div></div><h3>Kabaddi Bottom Frame</h3><p>Bold match frame with team names, score and match information.</p><div class="personalize">Personalize: Name • Logo • Photo</div><a class="open-studio-link kabaddi-score-open" href="kabaddi-scoreboard.html" target="_blank" rel="noopener">OPEN KABADDI SCOREBOARD ↗</a></article>
+      <article class="overlay-card reveal frame-kabaddi"><div class="preview"><div class="preview-bar"><span class="preview-logo">LOGO</span><span class="preview-copy"><strong>KABADDI • RAID IN PROGRESS</strong><small>TEAM NAME • SCORE • MATCH DETAILS</small></span><span class="preview-photo">PHOTO</span></div></div><h3>Kabaddi Bottom Frame</h3><p>Bold match frame with team names, score and match information.</p><div class="personalize">Personalize: Name • Logo • Photo</div><a class="open-studio-link kabaddi-score-open" href="?kabaddi=1">OPEN KABADDI SCOREBOARD STUDIO ↗</a></article>
       <article class="overlay-card reveal frame-wedding"><div class="preview"><div class="preview-bar"><span class="preview-logo">LOGO</span><span class="preview-copy"><strong>WEDDING CELEBRATION</strong><small>BRIDE NAME ♥ GROOM NAME</small></span><span class="preview-photo">PHOTO</span></div></div><h3>Wedding Bottom Frame</h3><p>Elegant design for the couple's names and wedding memories.</p><div class="personalize">Personalize: Couple Names • Logo • Photo</div></article>
       <article class="overlay-card reveal frame-haldi"><div class="preview"><div class="preview-bar"><span class="preview-logo">LOGO</span><span class="preview-copy"><strong>HALDI CEREMONY</strong><small>YOUR FAMILY NAME • CELEBRATION</small></span><span class="preview-photo">PHOTO</span></div></div><h3>Haldi Bottom Frame</h3><p>Festive yellow floral-inspired frame for the Haldi ceremony.</p><div class="personalize">Personalize: Name • Logo • Photo</div></article>
       <article class="overlay-card reveal frame-birthday"><div class="preview"><div class="preview-bar"><span class="preview-logo">LOGO</span><span class="preview-copy"><strong>HAPPY BIRTHDAY</strong><small>CELEBRATING YOUR NAME • AGE</small></span><span class="preview-photo">PHOTO</span></div></div><h3>Birthday Bottom Frame</h3><p>Colorful celebration frame with birthday name and photo.</p><div class="personalize">Personalize: Name • Logo • Photo</div></article>
@@ -429,6 +484,12 @@ body::before {
 <a class="whatsapp-float" href="https://wa.me/919890175727" target="_blank" rel="noopener" aria-label="Chat with STAR EVENT LIVE on WhatsApp">✆</a>
 
 </div><!-- /site-shell -->
+<div id="kabaddi-app" style="display:none"><div class="wrap"><div class="top"><div class="brand">STAR <b>EVENT</b> LIVE</div><a href="?">← WEBSITE</a></div><header class="head"><small>LIVE MATCH CENTER</small><h1>KABADDI SCOREBOARD</h1><p>1920×1080 broadcast scoreboard • live editable output</p></header><main class="board"><div class="scorestrip" id="scorestrip"><div class="side"><span class="flag" id="flagA">🇮🇳</span><span class="teamname" id="viewA">INDIA</span></div><div class="mid"><span class="score" id="viewScoreA">45</span><span class="dash">-</span><span class="score" id="viewScoreB">24</span></div><div class="side right"><span class="flag" id="flagB">🇱🇰</span><span class="teamname" id="viewB">SRI LANKA</span></div></div>
+<div class="control-title">MATCH CONTROLS</div><section class="controls"><div class="panel"><h3>LEFT TEAM</h3><div class="fields"><input id="nameA" value="INDIA" maxlength="24" aria-label="Left team name"><input id="flagInputA" value="🇮🇳" maxlength="4" aria-label="Left flag" style="width:58px;text-align:center"></div><div class="scorebuttons"><button onclick="changeScore('a',1)">+1</button><button onclick="changeScore('a',2)">+2</button><button onclick="changeScore('a',3)">+3</button><button class="minus" onclick="changeScore('a',-1)">−1</button></div></div><div class="panel"><h3>RIGHT TEAM</h3><div class="fields"><input id="nameB" value="SRI LANKA" maxlength="24" aria-label="Right team name"><input id="flagInputB" value="🇱🇰" maxlength="4" aria-label="Right flag" style="width:58px;text-align:center"></div><div class="scorebuttons"><button onclick="changeScore('b',1)">+1</button><button onclick="changeScore('b',2)">+2</button><button onclick="changeScore('b',3)">+3</button><button class="minus" onclick="changeScore('b',-1)">−1</button></div></div></section>
+<div class="actions"><button class="gold" onclick="swapTeams()">⇄ SWAP TEAMS</button><button onclick="resetScores()">↺ RESET SCORES</button><button onclick="setSample()">SAMPLE 45–24</button></div>
+<div class="urlbox"><strong>OBS / vMix BROWSER SOURCE URL</strong><code id="overlayUrl">Loading overlay URL…</code><button class="urlbtn" onclick="copyOverlayUrl()">COPY OVERLAY URL</button><p>OBS: Add → Browser Source → paste this URL. vMix: Add Input → Web Browser → paste this URL. Set width 1920 and height 1080. The overlay canvas is transparent; the scoreboard appears in the upper area.</p></div></main><p class="note">Control this page in your normal browser. Add the separate transparent URL above as a Browser Source in OBS or a Web Browser input in vMix.</p></div>
+</div>
+
 <script>
 const menuBtn=document.getElementById('menuBtn');
 const navLinks=document.getElementById('navLinks');
@@ -445,5 +506,21 @@ document.getElementById('bookingForm').addEventListener('submit',e=>{
 
 
 </script>
+
+<script id="kabaddi-single-file-js">
+(function(){
+const params=new URLSearchParams(location.search);const route=params.has('kabaddi')||params.has('kabaddi-overlay');if(!route)return;
+const $=id=>document.getElementById(id);const KEY='star-kabaddi-strip-v2';let data={a:45,b:24,nameA:'INDIA',nameB:'SRI LANKA',flagA:'🇮🇳',flagB:'🇱🇰'};let overlay=params.has('kabaddi-overlay');
+function load(){try{const v=JSON.parse(localStorage.getItem(KEY));if(v)data={...data,...v}}catch(e){}}
+function renderFlag(el,value){const india='<svg viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg"><rect width="90" height="20" fill="#ff9933"/><rect y="20" width="90" height="20" fill="#fff"/><rect y="40" width="90" height="20" fill="#138808"/><circle cx="45" cy="30" r="7" fill="none" stroke="#000080" stroke-width="1.5"/><circle cx="45" cy="30" r="1.4" fill="#000080"/></svg>';const sri='<svg viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg"><rect width="90" height="60" fill="#ffb915"/><rect x="4" y="4" width="82" height="52" fill="#8d153a"/><rect x="8" y="4" width="9" height="52" fill="#00534e"/><rect x="19" y="4" width="9" height="52" fill="#eb7400"/><path d="M57 16l4 5 5-2-2 7 5 5-7 1-3 8-4-7-7-1 5-5-1-7z" fill="#ffcc33"/><path d="M45 42q9-8 18 0" fill="none" stroke="#ffcc33" stroke-width="2"/></svg>';if(value==='🇮🇳')el.innerHTML=india;else if(value==='🇱🇰')el.innerHTML=sri;else el.textContent=value||'🏳️'}
+function draw(){ $('viewA').textContent=data.nameA;$('viewB').textContent=data.nameB;$('viewScoreA').textContent=data.a;$('viewScoreB').textContent=data.b;renderFlag($('flagA'),data.flagA);renderFlag($('flagB'),data.flagB);if($('nameA')){$('nameA').value=data.nameA;$('nameB').value=data.nameB;$('flagInputA').value=data.flagA;$('flagInputB').value=data.flagB}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){}draw()}
+window.changeScore=(team,n)=>{data[team]=Math.max(0,Number(data[team]||0)+n);save()};window.swapTeams=()=>{[data.a,data.b]=[data.b,data.a];[data.nameA,data.nameB]=[data.nameB,data.nameA];[data.flagA,data.flagB]=[data.flagB,data.flagA];save()};window.resetScores=()=>{data.a=0;data.b=0;save()};window.setSample=()=>{data.a=45;data.b=24;save()};
+window.copyOverlayUrl=()=>{const u=new URL(location.href);u.search='?kabaddi-overlay=1';u.hash='';if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u.href).then(()=>alert('OBS / vMix overlay URL copied!')).catch(()=>prompt('Copy this URL:',u.href))}else prompt('Copy this URL:',u.href)};
+load();if(!overlay){$('nameA').addEventListener('input',e=>{data.nameA=e.target.value.toUpperCase();save()});$('nameB').addEventListener('input',e=>{data.nameB=e.target.value.toUpperCase();save()});$('flagInputA').addEventListener('input',e=>{data.flagA=e.target.value;save()});$('flagInputB').addEventListener('input',e=>{data.flagB=e.target.value;save()});const u=new URL(location.href);u.search='?kabaddi-overlay=1';u.hash='';$('overlayUrl').textContent=u.href;}else{document.body.classList.add('kabaddi-output');document.title='Kabaddi Score Overlay | STAR EVENT LIVE';}
+draw();window.addEventListener('storage',e=>{if(e.key===KEY){load();draw()}});if(overlay)setInterval(()=>{load();draw()},500);
+})();
+</script>
+
 </body>
 </html>
