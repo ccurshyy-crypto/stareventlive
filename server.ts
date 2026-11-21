@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 const PORT = Number(process.env.PORT) || 3000;
 const isProd = process.env.NODE_ENV === 'production';
-const ADMIN_PIN = (process.env.OVERLAY_ADMIN_PIN || '9890').trim();
+const ADMIN_PIN = (process.env.OVERLAY_ADMIN_PIN || '683194').trim();
 const UNLOCK_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 const VALID_SKUS = new Set([
@@ -18,6 +18,10 @@ const VALID_SKUS = new Set([
   'kabaddi-modern',
   'haldi-classic',
   'haldi-modern',
+  'banner-theme1',
+  'banner-theme2',
+  'banner-theme3',
+  'banner-theme4',
 ]);
 
 export type OrderStatus = 'pending' | 'approved' | 'rejected';
@@ -543,6 +547,15 @@ async function startServer() {
       }
     });
   });
+
+  // Long-lived browser caching for pre-optimized web media assets
+  app.use(
+    '/assets/optimized',
+    express.static(path.resolve(__dirname, 'public/assets/optimized'), {
+      maxAge: '365d',
+      immutable: true,
+    })
+  );
 
   if (!isProd) {
     const { createServer: createViteServer } = await import('vite');

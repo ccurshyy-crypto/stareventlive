@@ -1,6 +1,8 @@
 {
   "name": "Star Event Live",
-  "description": "Professional 4K live streaming, multi-camera recording, editing, and custom on-screen graphics for cricket matches, weddings, haldi, birthdays, and all events on YouTube, Facebook, and Instagram.",
+  "description": "Professional 4K live streaming, multi-camera recording, editing, and custom on-screen graphics for cricket matches, kabaddi, weddings, haldi, birthdays, and all events on YouTube (@stareventlive01).",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
